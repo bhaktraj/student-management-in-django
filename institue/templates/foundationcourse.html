@@ -1,0 +1,203 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+{% load static %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Foundation Course Details</h2>
+
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="{% static 'assets/img/foundation.jpg' %}" class="img-fluid" alt="">
+                    <h1 class="h3 mt-4"> <strong>JEE foundation course</strong>  </h1>
+                    <p>
+                        We all know that preparing for JEE Main and JEE Advanced along with school studies can be a bit
+                        hectic for aspirants. So why not start their training early enough so that they do not have to
+                        face the hardships later? This is what the IIT JEE foundation course is all about. As the name
+                        suggests, a JEE foundation course is designed to lay the right basis for difficult concepts of
+                        Science and Mathematics. Whether it is an IIT foundation course for class 9 or an online IIT
+                        foundation course for class 8 or an IIT foundation course for class 6, the foundation course at
+                        our institute prepares the students to attempt a variety of competitive exams and build a strong
+                        aptitude from the beginning.
+
+                    </p>
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Trainer</h5>
+                        <p><a href="#">Walter White</a></p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Course Fee</h5>
+                        <p>$165</p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Available Seats</h5>
+                        <p>30</p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Schedule</h5>
+                        <p>5.00 pm - 7.00 pm</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Cource Details Section -->
+
+    <!-- ======= Cource Details Tabs Section ======= -->
+    <section id="cource-details-tabs" class="cource-details-tabs">
+        <div class="container" data-aos="fade-up">
+
+            <h1 class="h3 mt-4"> <strong>Foundation syllabus</strong>  </h1>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Physics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Chemistry</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Biology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Mathematics</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Physics</h3>
+                                    <ul>
+
+                                        <li> Optics</li>
+                                        <li> Electrostatics</li>
+                                        <li> Current Electricity</li>
+                                        <li> Magnetic Effect of Current</li>
+                                        <li> Sources of Energy</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{% static 'assets/img/course-details-tab-1.png' %}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-2">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Chemistry</h3>
+                                    <ul>
+
+                                        <li> Chemical Reactions and Equations</li>
+                                        <li> Acids, Bases and Salts</li>
+                                        <li> Metals & Non-Metals</li>
+                                        <li> Carbon and Its Compounds</li>
+                                        <li> Periodic Classification of Elements</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{% static 'assets/img/course-details-tab-2.png' %}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Biology</h3>
+                                    <ul>
+
+                                        <li> Life Processes</li>
+                                        <li> Control and Coordination</li>
+                                        <li> How do Organisms Reproduce</li>
+                                        <li> Heredity and Evolution</li>
+                                        <li> Our Environment</li>
+                                        <li> Management of Natural Resources</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{% static 'assets/img/course-details-tab-3.png' %}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-4">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Mathematics</h3>
+                                    <ul>
+
+                                        <li> Real Numbers</li>
+                                        <li> Polynomials</li>
+                                        <li> Pair of Linear Equations in two Variables</li>
+                                        <li> Quadratic Equations</li>
+                                        <li> Sequence and Series</li>
+                                        <li> Similar Triangles</li>
+                                        <li> Co-Ordinate Geometry</li>
+                                        <li> Introduction to Trigonometry</li>
+                                        <li> Some Applications of Trigonometry</li>
+                                        <li> Circles</li>
+                                        <li> Constructions</li>
+                                        <li> Areas Related to Circles</li>
+                                        <li> Statistics</li>
+                                        <li> Probability</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{% static 'assets/img/course-details-tab-4.png' %}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-5">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.
+                                    </p>
+                                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae
+                                        ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet.
+                                        Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{% static 'assets/img/course-details-tab-5.png' %}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Cource Details Tabs Section -->
+
+</main><!-- End #main -->
+{% endblock %}

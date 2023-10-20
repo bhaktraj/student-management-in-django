@@ -1,0 +1,86 @@
+{% extends 'dashboard\teacherbasic.html' %}
+
+{% block body %}
+{% load static %}
+
+<main id="main" class="main">
+    <section class="section">
+      <h1></h1>
+        {% if messages %}
+        {% for message in messages %}
+        {% if message.tags == 'success' %}
+        <div class="alert alert-success" role="alert">
+          {{message}}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col-lg-12">
+    
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"> Marks Update</h5>
+            
+                    <!-- General Form Elements -->
+                    <form method="post" action="{% url 'marksupdate' %} " enctype="multipart/form-data"> 
+                      {% csrf_token %}
+                      <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">userid</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" name="userid" required >
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="testdate" class="col-sm-2 col-form-label">Date of test</label>
+                        <div class="col-sm-10">
+                          <input type="date" id="testdate" name="test" class="form-control">
+                        </div>
+                      </div>
+                      
+                      <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">English</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="english">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Math</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="math">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Science</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="science">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Social Science</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="sscience">
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Submit</label>
+                        <div class="col-sm-10">
+                          <button type="submit" class="btn btn-primary">Submit Form</button>
+                        </div>
+                      </div>
+            
+                    </form><!-- End General Form Elements -->
+            
+                  </div>
+                </div>
+            
+              </div>
+              
+        </div>
+    
+    
+    </section>
+    </main>
+{% endblock %}

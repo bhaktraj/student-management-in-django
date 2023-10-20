@@ -1,0 +1,125 @@
+{% extends 'dashboard\das.html' %}
+
+{% block body %}
+{% load static %}
+<main id="main" class="main">
+<section class="section">
+  <h1>Homepage Update</h1>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'success' %}
+    <div class="alert alert-success" role="alert">
+      {{message}}
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Topper of the Month For back page</h5>
+        
+                <!-- General Form Elements -->
+                <form method="post" action="{% url 'tbupdate' %}" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" class="" name="name">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Class</label>
+                    <div class="col-sm-10">
+                      <select class="form-select" aria-label="Default select example" name="study">
+                        <option selected>Select Class</option>
+                        <option value="6">Class 6  </option>
+                        <option value="7">Class 7</option>
+                        <option value="8">Class 8</option>
+                        <option value="9">Class 9</option>
+                        <option value="10">Class 10</option>
+                        <option value="11">Class 11</option>
+                        <option value="12">Class 12</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputtext" class="col-sm-2 col-form-label">School</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="school">
+                    </div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Marks obtain</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="marks">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" type="file" id="formFile" class="" name="tphoto">
+                    </div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Submit Button</label>
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-primary">Submit Form</button>
+                    </div>
+                  </div>
+        
+                </form><!-- End General Form Elements -->
+
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Topper Picture List</h5>
+  
+                    <!-- Default Table -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Picture</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Class</th>
+                          <th scope="col">School</th>
+                          <th scope="col">Update Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for n in topper %}
+                        <tr>
+  
+                          <th scope="row">{{n.id}}</th>
+                          <td class="homedatapic"><img class="img-fluid " src="/media/{{n.topper_pic}}" alt=""></td>
+  
+                          <td>{{n.name}}</td>
+                          <td>{{n.study}}</td>
+                          <td>{{n.school}}</td>
+                          <td>{{n.date}}</td>
+
+                        </tr>
+                        {% endfor %}
+  
+                      </tbody>
+                    </table>
+                    <!-- End Default Table Example -->
+                  </div>
+                </div>
+  
+        
+              </div>
+            </div>
+        
+          </div>
+          
+    </div>
+
+
+</section>
+</main>
+{% endblock %}

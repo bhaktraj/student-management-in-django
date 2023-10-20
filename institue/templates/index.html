@@ -1,0 +1,545 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+{% load static %}
+
+
+{% if messages %}
+{% for message in messages %}
+
+<div class="alert alert-success" role="alert">
+  {{message}}
+</div>
+
+{% endfor %}
+{% endif %}
+
+<!-- ======= Hero Slider Section ======= -->
+<section id="hero-slider" class="hero-slider mt-3">
+  <div class="container-md" data-aos="fade-in">
+    <div class="row">
+      <div class="col-12">
+        <div class="swiper sliderFeaturedPosts">
+          <div class="swiper-wrapper">
+            {% for n in homepicture %}
+            <div class="swiper-slide">
+              <a href="/" class="img-bg d-flex align-items-end"
+                style="background-image: url(/media/{{n.homepage_pic}});">
+                <div class="img-bg-inner">
+
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="custom-swiper-button-next">
+            <span class="bi-chevron-right"></span>
+          </div>
+          <div class="custom-swiper-button-prev">
+            <span class="bi-chevron-left"></span>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero Slider Section -->
+
+<main id="main">
+  <!-- ======= News Section ======= -->
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+          <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+            <span class="d-flex align-items-center">&nbsp;News</span>
+          </div>
+          <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+            onmouseout="this.start();"> {% for n in notice %}
+            <a href="#">{{n.notice}} </a> <span class="dot">{{n.date}}</span> &nspar;
+            {% endfor %}
+          </marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End News -->
+  <!-- ======= Services Section ======= -->
+  <section id="services1" class="services1">
+    <div class="container" data-aos="fade-up">
+
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="icon-box">
+
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+
+            <h4> <a href="/foundation/"> 6th To 10th </a></h4>
+            <p>Gives you conceptual clarity which is useful for a strong foundation
+              Special batch for 10th(CBSE AND ICSE Board)
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/question-mark-glass.png' %}" />
+            </div>
+            <h4><a href="/1112th/">11th to 12th</a></h4>
+            <p>Physics ,Chemistry and Maths
+              Physics ,Chemistry and Biology
+              Commerce
+            </p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/construction-worker-holding-drill-machine.png' %}" />
+            </div>
+            <h4><a href="/jeedetails/">JEE(Main+Advanced)</a></h4>
+            <p>Joint Entrance Examination – Advanced (JEE-Advanced) (formerly the Indian Institute of Technology</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/hospital-location.png' %}" />
+            </div>
+            <h4><a href="/neetdetails/">NEET</a></h4>
+            <p>The National Eligibility cum Entrance Test (Undergraduate) or NEET (UG), formerly the All India Pre-Medical Test (AIPMT)</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+  <!-- ======= Notice Section ======= -->
+
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-8  align-items-stretch mb-5 mb-lg-0">
+          <div class="noticetitle d-flex flex-column align-items-center">
+            <h4 class="title mt-3"><a href="">Topper of the Month</a></h4>
+          </div>
+          <div id="hero-slider" class="hero-slider mt-0">
+
+            <div class="" data-aos="fade-in">
+              <div class="row">
+                <div class="col-12">
+                  <div class="swiper sliderFeaturedPosts">
+                    <div class="swiper-wrapper">
+                      {% for n in tophomepage %}
+                      <div class="swiper-slide">
+                        <a href="/" class="img-bg topperimg d-flex align-items-end "
+                          style="background-image: url(/media/{{n.topper_pic}});">
+                          {% endfor %}
+                        </a>
+                      </div>
+                    </div>
+                    <div class="custom-swiper-button-next">
+                      <span class="bi-chevron-right"></span>
+                    </div>
+                    <div class="custom-swiper-button-prev">
+                      <span class="bi-chevron-left"></span>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Hero Slider Section -->
+          </div>
+
+
+        </div>
+        <div class="col-md-6 col-lg-4  align-items-stretch mb-5 mb-lg-0 noticebox">
+          <div class="noticetitle d-flex flex-column align-items-center">
+            <h4 class="title mt-3"><a href="">Notification</a></h4>
+          </div>
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+
+
+            <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+              {% for n in notice %}
+              <li> {{n.date}} &nbsp; {{n.notice}}</li>
+              <br>
+              {% endfor %}
+
+            </marquee>
+
+            <div style="flex-direction: column; text-align: center;">
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+    </div>
+  </section>
+  <!-- ======= end Notice ======= -->
+
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h1>Best Institute in Haridwar</h1>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+          <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3>Vision</h3>
+          <p class="fst-italic">
+            To provide affordable and quality education to the students of <strong>JEE/NEET aspirants</strong> and
+            nurture them to be highly competitive and skilled with ethics and nation-building spirit.
+          </p>
+          <p>
+            To provide affordable and quality education to the students of <strong>JEE/NEET aspirants</strong> and
+            nurture them to be highly competitive and skilled with ethics and nation-building spirit.
+          </p>
+          <h3>Why Choose Us</h3>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Best Coaching in Haridwar for JEE, NEET and Foundation</li>
+            <li><i class="bi bi-check-circle"></i> Affordable Fees</li>
+            <li><i class="bi bi-check-circle"></i> Highly Skilled Faculties</li>
+            <li><i class="bi bi-check-circle"></i> Updated Study Material</li>
+            <li><i class="bi bi-check-circle"></i> Personal Care </li>
+            <li><i class="bi bi-check-circle"></i> Proper And Latest Exam Pattern Followed</li>
+            <li><i class="bi bi-check-circle"></i> Scientific Feedback Mechanism</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+  <section id="cta" class="cta bcta" style="background-image: linear-gradient(120deg, rgb(25, 44, 218) 15%, rgba(23, 245, 153, 0.9) 55%, rgb(61, 238, 17) 100%, rgb(73, 255, 1));">
+    <div class="container" data-aos="zoom-in">
+      <div class="text-center">
+        <h3>Admission Information</h3>
+        <p> provide all the admission info and solve related queries.</p>
+        <a class="cta-btn" href="#" data-bs-toggle="modal" data-bs-target="#modalContactForm">Contact Us</a>
+      </div>
+    </div>
+  </section><!-- End Cta Section -->
+
+  <!-- ======= Why Us Section ======= -->
+  <section id="why-us" class="why-us">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-4 d-flex align-items-stretch">
+          <div class="content">
+            <h3>Why Choose Us ?</h3>
+            <p>The best coaching in HARIDWAR(Uttrakhand) for the preparation of JEE (Main+Advanced), NEET-(UG),
+              Foundation (Class VI to X) and Commerce Education (11th, 12th).</p>
+            <div class="text-center">
+              <a href="/about/" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-receipt"></i>
+                  <h1 class="h5">Best Coaching in Haridwar for JEE, NEET and Foundation Course</h1>
+
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-cube-alt"></i>
+                  <h1 class="h5"> Highly Skilled Faculties </h1>
+
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-images"></i>
+                  <h1 class="h5">Updated Study Material</h1>
+                </div>
+              </div>
+            </div>
+          </div><!-- End .content-->
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Why Us Section -->
+
+  <section id="gallery" class="gallery">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Events</h2>
+        <h3>Come let's see the <span>Photo</span></h3>
+
+        <div class="row">
+
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
+            <div class="box1">
+              {% for n in gallery %}
+
+              <div class="box4"><a href="/event/"><img class="img-fluid" src="/media/{{n.gallery_pic}}" alt=""></a>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="box5">
+              {% for n in gallery1 %}
+              <div class="box4"><a href="/event/"><img class="img-fluid" src="/media/{{n.gallery_pic}}" alt=""></a>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-left" data-aos-delay="100">
+            {% for n in gallery2 %}
+            <a href="/event/">
+              <img src="/media/{{n.gallery_pic}}" class="img-fluid" alt="">
+            </a>
+            {% endfor %}
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+    <!-- ======= Services Section ======= -->
+    <section id="services1" class="services1">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Download Notes</h2>
+          <h3>Notes  <span>Download</span></h3>
+          </div>
+  
+  
+        <div class="row">
+  
+          <div class="col-lg-12 col-md-6 d-flex justify-content-center mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+  
+            <div class="icon-box">
+  
+              <div class="icon"><img src="{% static 'assets/img/file-download.png' %}" />
+              </div>
+  
+              <h4> <a href="/notes"> Notes Download </a></h4>
+              <p>Gives you conceptual clarity which is useful for a strong foundation
+                Special batch for 10th(CBSE AND ICSE Board)
+              </p>
+            </div>
+  
+          </div>
+          
+  
+  
+        </div>
+  
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+  <!-- ======= Popular Courses Section ======= -->
+  <section id="popular-courses" class="courses">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Courses</h2>
+        <p>Popular Courses</p>
+      </div>
+
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="course-item">
+            <img src="{% static 'assets/img/Foundation Course.png'%}" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Foundation Course</h4>
+                <p class="price">$169</p>
+              </div>
+
+              <h3><a href="/foundation/">Foundation Course</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem
+                tempore.</p>
+              
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="course-item">
+            <img src="{% static 'assets/img/jeemain.png'%}" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Marketing</h4>
+                <p class="price">$250</p>
+              </div>
+
+              <h3><a href="/jeedetails/">JEE (Mains+Advance)</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem
+                tempore.</p>
+              
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="course-item">
+            <img src="{% static 'assets/img/neet.png'%}" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Content</h4>
+                <p class="price">$180</p>
+              </div>
+
+              <h3><a href="/neetdetails/">NEET</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem
+                tempore.</p>
+              
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+      </div>
+
+    </div>
+  </section><!-- End Popular Courses Section -->
+
+  <section>
+    <div class="container showimg d-flex justify-content-center" data-aos="zoom-in">
+      <img src="{% static '/assets/img/banner.png' %}" class="img-fluid" alt="">
+    </div>
+  </section>
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Student Testimonials</h2>
+
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          {% for n in testinomial %}
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                {{n.feedback}}
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>{{n.name}}</h3>
+              <h4>Ceo &amp; Founder</h4>
+            </div>
+          </div><!-- End testimonial item -->
+          {% endfor %}
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact"
+    style="background-color: #f12020; background-image: linear-gradient(120deg, rgb(232, 65, 23) 1%, rgba(245, 75, 23, 0.9) 85%, rgb(232, 129, 39) 100%, rgb(255, 242, 1));">
+    <div class="container mt-5" data-aos="fade-up">
+
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="col-lg-6">
+
+          <div class="row mt-2" style="color: white;">
+            <H2> <b>Lets Talk</b> </H2>
+            <h3>Our clients are smart, thoughtful, & forward-thinking.</h3>
+            <h4>Sound like you? Get in touch.</h4>
+            <h1 class="ctacall  mt-5"><a href="tel:+917065680680" class="phonefont">+91-70656 80680</a></h1>
+
+
+
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <form method="post" action="{% url 'contact' %}" enctype="multipart/form-data"  
+            class="php-email-form1">
+            {% csrf_token %}
+            {% if messages %}
+            {% for message in messages %}
+
+            <div class="alert alert-success" role="alert">
+              {{message}}
+            </div>
+
+            {% endfor %}
+            {% endif %}
+            <div class="row">
+              <div class="col form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col form-group">
+                <input type="tel" name="phone" class="form-control" pattern="[0-9]{10}" id="phone"
+                  placeholder="Your number" required>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Your email (optional)">
+
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="msg" rows="5" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+
+
+{% endblock %}

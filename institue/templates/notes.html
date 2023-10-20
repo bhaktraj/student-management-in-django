@@ -1,0 +1,187 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+{% load static %}
+<main id="main" data-aos="fade-in">
+   
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h2>Notes</h2>
+            <p></p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+      <!-- ======= Services Section ======= -->
+  <section id="services1" class="services1">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Download</h2>
+        <p>Notes</p>
+      </div>
+
+      <div class="section-title">
+        
+        <p>Class 12 Notes</p>
+      </div>
+
+
+      <div class="row">
+        {% for n in class12 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+
+
+      </div>
+
+      <div class="section-title">
+        
+        <p>Class 11 Notes</p>
+      </div>
+
+      
+      <div class="row">
+        {% for n in class11 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+
+
+      </div>
+
+      <div class="section-title">
+        
+        <p>Class 10 Notes</p>
+      </div>
+
+
+      <div class="row">
+        {% for n in class10 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+
+       
+
+
+      </div>
+      <div class="section-title">
+        
+        <p>Class 9 Notes</p>
+      </div>
+      <div class="row">
+        {% for n in class9 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+
+       
+
+
+      </div>
+
+
+      
+      <div class="section-title">
+        
+        <p>Class 8 Notes</p>
+      </div>
+
+
+      <div class="row">
+        {% for n in class8 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+
+       
+
+
+      </div>
+      <div class="section-title">
+        
+        <p>Class 7 Notes</p>
+      </div>
+
+
+      <div class="row">
+        {% for n in class7 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="{% static 'assets/img/hospital-location.png' %}" download>physics</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+
+       
+
+
+      </div>
+      <div class="section-title">
+        <h2></h2>
+        <p>Class 6 Notes</p>
+      </div>
+
+
+      <div class="row">
+        {% for n in class6 %}
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+            </div>
+            <h4><a href="/media/{{n.Notes}}" download>{{n.about}}</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        {% endfor %}
+
+       
+
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+</main><!-- End #main -->
+
+
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+{% load static %}
+
+<main id="main" class="mt-5" data-aos="fade-in">
+
+  <section class="container">
+    <div class="d-flex container justify-content-center ">
+
+      <div class="d-flex container flex-row justify-content-center  ">
+
+        <a href="/" class=" d-flex justify-content-center ">
+          <img class="resultlogo" src="{% static 'assets/img/logo.png' %}" alt="">&nbsp;&nbsp;
+          <span class=" d-lg-block mb-lg-1 resulttext">फ्लोरैन्ट एजुकेशन
+          </span><span class=" d-lg-block mt-3 box resulttext">Scale the sky........
+          </span>
+        </a>
+
+      </div><!-- End Logo -->
+  </section>
+
+  <section class="container">
+
+
+    <div class="card">
+      <div class="card-body profile-card pt-4 d-flex justify-content-around">
+        <div class="d-flex flex-row align-items-start pt-3">
+          <img src="/media/{{student.profile_pic}}" alt="Profile" class="img-fluid">
+        </div>
+
+        <div class="d-flex flex-column justify-content-center">
+          <div class="  ">
+            <h1>Name :- {{student.name}}</h1>
+            <h3>Class :- {{student.Study}}</h3>
+            <h4>Userid :- {{student.userid}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section>
+
+    <div class="col-12 container ">
+      <div class="card recent-sales overflow-auto">
+
+
+
+        <div class="card-body">
+          <h5 class="card-title">Recent Exam Result</h5>
+
+          <table class="table table-borderless datatable">
+            <thead>
+              <tr>
+                <th scope="row">date</th>
+                <td scope="row">english</td>
+                <td scope="row">math</td>
+                <td scope="row">Hindi</td>
+                <td scope="row">Science</td>
+                <td scope="row">Social Science</td>
+              </tr>
+              
+              
+              
+            </thead>
+            <tbody>
+             
+              
+              {% for n in user %}
+              <tr>
+                <th scope="col">{{n.date}}</th>
+                <th scope="col">{{n.english}}</th>
+                <th scope="col">{{n.math}}</th>
+                <td>{{n.hindi}}</td>
+                <th scope="col">{{n.science}} </th>
+                <th scope="col">{{n.socialscience}}</th>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div><!-- End Recent Sales -->
+
+  </section>
+
+
+
+</main><!-- End #main -->
+
+
+
+{% endblock %}

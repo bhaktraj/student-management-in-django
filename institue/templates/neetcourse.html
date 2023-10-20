@@ -1,0 +1,92 @@
+{% extends 'basic.html' %}
+
+{% block body %} 
+{% load static %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>NEET</h2>
+        
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <img src="{% static 'assets/img/course-details.jpg' %}" class="img-fluid" alt="">
+            <h3>NEET</h3>
+            <p>
+              The National Eligibility Entrance Test (NEET) is one of the major entrance tests conducted in India. This test is the basis for qualification in the MBBS and BDS fields across India. Any student who has completed their +2 needs to clear the NEET exams to pursue their career in the medical field. With a seat of over 90,000 and no. of registered students reaching up to 15.97 lakhs (As of 2020), the competition is quite tough making NEET one of the toughest entrance exams around.
+            </p>
+          </div>
+          <div class="col-lg-4">
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Trainer</h5>
+              <p><a href="#">Walter White</a></p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Course Fee</h5>
+              <p>$165</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Available Seats</h5>
+              <p>30</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Schedule</h5>
+              <p>5.00 pm - 7.00 pm</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cource Details Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services1" class="services1">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Download</h2>
+              <p>Syllabus</p>
+            </div>
+      
+      
+            <div class="row">
+    
+                
+                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                      <div class="icon"><img src="{% static 'assets/img/open-book.png' %}" />
+                      </div>
+                      <h4><a href="{% static 'assets/pdffile/NEET SYLLABUS.pdf' %}" download>Syllabus of NEET)</a></h4>
+                      <p>Click Here to download Syllabus</p>
+                    </div>
+                  </div>
+                  
+          
+          
+                
+      
+      
+            </div>
+      
+          </div>
+        </section><!-- End Services Section -->
+
+
+  </main><!-- End #main -->
+  {% endblock %}
+
+
+ 

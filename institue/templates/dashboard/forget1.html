@@ -1,0 +1,75 @@
+{% extends 'dashboard\loginbasic.html' %}
+
+{% block body %}
+
+  {% load static %}
+
+  <main>
+    
+
+          
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container" data-aos="fade-up">
+        
+                <div class="row">
+                  <div class="col-lg-6 order-1 order-lg-1 card mb-3 justify-content-center logologin1" data-aos="fade-left" data-aos-delay="100">
+                    <a href="/" class="logo logologin d-flex justify-content-center w-auto">
+                      <img src="{% static 'assets/img/logo.png' %}" alt="">
+                      
+                      
+                    </a>
+                    <h1 class=" d-flex justify-content-center loginh1"> <strong>फ्लोरैन्ट एजुकेशन</strong> </h1>
+                  </div>
+                  <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
+                   <div class="card mb-3 ">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+                    <p class="text-center small">Enter your username & password to login</p>
+                  </div>
+
+                  <form method="post" action="{% url 'verify' %}" class="row g-3 needs-validation" novalidate>
+                    {% csrf_token %}
+                    {% if messages %}
+    {% for message in messages %}
+    
+    <div class="alert alert-success" role="alert">
+      {{message}}
+    </div>
+    
+    {% endfor %}
+    {% endif %}
+                    <div class="col-12">
+                      <label for="yourUsername" class="form-label">Userid</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="text" name="userid" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please enter your userid.</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit">Login</button>
+                    </div>
+
+                  </form>
+                  <br>
+                  <h1 class=" d-flex justify-content-center loginh1"> <strong>फ्लोरैन्ट एजुकेशन</strong> </h1>
+
+                </div>
+              </div>
+        
+                  </div>
+                </div>
+        
+              </div>
+    </div>
+
+    </section>
+
+    </div>
+  </main><!-- End #main -->
+  {% endblock %}
